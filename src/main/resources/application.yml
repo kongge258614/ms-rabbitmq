@@ -1,0 +1,18 @@
+spring:
+  rabbitmq:
+    addresses: 127.0.0.1
+    port: 5672
+    username: lkker
+    password: lkker123456
+    virtual-host: lkker
+    publisher-confirms: true
+    publisher-returns: true
+    template:
+      mandatory: true
+    listener:
+      simple:
+        acknowledge-mode: manual
+        auto-startup: true
+        concurrency: 1
+
+
