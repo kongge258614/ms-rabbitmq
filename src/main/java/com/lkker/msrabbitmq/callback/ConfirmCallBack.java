@@ -1,4 +1,4 @@
-package com.lkker.msrabbitmq.rabbitmq;
+package com.lkker.msrabbitmq.callback;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -67,10 +67,4 @@ public class RabbitmqConfig {
         return BindingBuilder.bind(queue).to(topicExchange).with("lkker.test001");
     }
 
-//    @Bean
-//    public RabbitTemplate rabbitTemplate(){
-//        RabbitTemplate rabbitTemplate = new RabbitTemplate();
-//        rabbitTemplate.setConnectionFactory(connectionFactory());
-//        return rabbitTemplate;
-//    }
 }
