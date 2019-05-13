@@ -1,10 +1,13 @@
-package com.lkker.msrabbitmq.callback;
+package com.lkker.msrabbitmq.rabbitmq;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
 
 /**
  * @Author liliang
@@ -13,6 +16,15 @@ import org.springframework.stereotype.Component;
  **/
 @Component
 public class ConfirmCallBack implements RabbitTemplate.ConfirmCallback {
+
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
+    // 指定 ConfirmCallBack
+    @PostConstruct
+    public void initRabbitTemplate(){
+        rabbitTemplate.setConfirmCallback(this);
+    }
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
     @Override
