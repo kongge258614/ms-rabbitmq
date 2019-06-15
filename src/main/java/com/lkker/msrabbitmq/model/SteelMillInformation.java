@@ -30,6 +30,9 @@ public class SteelMillInformation {
     @Column(name = "creation_time")
     private String creationTime;
 
+    // 状态
+    private int status;
+
     @Id
     @GeneratedValue()
     public String getSteelId() {
@@ -70,5 +73,13 @@ public class SteelMillInformation {
 
     public void setCreationTime(String creationTime) {
         this.creationTime = creationTime;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }
