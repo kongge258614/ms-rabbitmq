@@ -14,5 +14,5 @@ public interface SteelMillInfoService {
 
     List<SteelMillInformation> getSteelMillInfoList();
 
-    List<SteelMillInformation> getSteelAddressInfo();
+    List<SteelAddressInfo> getSteelAddressInfo();
 }
