@@ -38,6 +38,9 @@ public class SteelAddressInfo {
         this.yield = yield;
     }
 
+    public SteelAddressInfo() {
+    }
+
     public SteelAddressInfo(String steelName, String address, double yield) {
         this.steelName = steelName;
         this.address = address;
