@@ -82,4 +82,10 @@ public class SteelMillInformation {
     public void setStatus(int status) {
         this.status = status;
     }
+
+    public SteelMillInformation(String steelName, String address, double yield) {
+        this.steelName = steelName;
+        this.address = address;
+        this.yield = yield;
+    }
 }

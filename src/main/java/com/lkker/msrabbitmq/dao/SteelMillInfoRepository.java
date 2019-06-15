@@ -15,6 +15,6 @@ import java.util.List;
  **/
 public interface SteelMillInfoRepository extends JpaRepository<SteelMillInformation,String> {
 
-    @Query(value = "SELECT smi.steel_name,smi.address,smi.yield FROM steel_mill_information smi ORDER BY smi.yield DESC LIMIT 2",nativeQuery = true)
-    List<SteelAddressInfo> findOrderByYield(Pageable pageable);
+    @Query(value = "SELECT new SteelMillInformation(steelName,address,yield) FROM SteelMillInformation smi where smi.status=?1")
+    List<SteelMillInformation> findOrderByYield(int status,Pageable pageable);
 }
