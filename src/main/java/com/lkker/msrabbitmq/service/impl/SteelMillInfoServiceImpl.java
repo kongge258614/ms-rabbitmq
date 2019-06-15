@@ -28,6 +28,7 @@ public class SteelMillInfoServiceImpl implements SteelMillInfoService {
 
     @Override
     public List<SteelAddressInfo> getSteelAddressInfo() {
-        return null;
+        List<SteelAddressInfo> orderByYield = steelMillInfoRepository.findOrderByYield();
+        return orderByYield;
     }
 }

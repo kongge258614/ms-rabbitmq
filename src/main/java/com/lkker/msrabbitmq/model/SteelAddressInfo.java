@@ -5,6 +5,7 @@ package com.lkker.msrabbitmq.model;
  * @Date 2019/6/15 11:15
  * @Description
  **/
+
 public class SteelAddressInfo {
 
     private String steelName;

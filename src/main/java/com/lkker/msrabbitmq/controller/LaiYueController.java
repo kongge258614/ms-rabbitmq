@@ -1,5 +1,6 @@
 package com.lkker.msrabbitmq.controller;
 
+import com.lkker.msrabbitmq.model.SteelAddressInfo;
 import com.lkker.msrabbitmq.model.SteelMillInformation;
 import com.lkker.msrabbitmq.service.SteelMillInfoService;
 import io.swagger.annotations.Api;
@@ -33,6 +34,13 @@ public class LaiYueController {
         List<SteelMillInformation> steelMillInfoList = steelMillInfoService.getSteelMillInfoList();
         return steelMillInfoList;
     }
+
+    @GetMapping("/steelAddressInfo")
+    public List<SteelAddressInfo> steelAddressInfo(){
+        List<SteelAddressInfo> steelAddressInfoList = steelMillInfoService.getSteelAddressInfo();
+        return steelAddressInfoList;
+    }
+
 
 
 
