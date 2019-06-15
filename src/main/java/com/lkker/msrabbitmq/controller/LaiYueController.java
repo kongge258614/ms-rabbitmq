@@ -36,8 +36,8 @@ public class LaiYueController {
     }
 
     @GetMapping("/steelAddressInfo")
-    public List<SteelMillInformation> steelAddressInfo(){
-        List<SteelMillInformation> steelAddressInfoList = steelMillInfoService.getSteelAddressInfo();
+    public List<SteelAddressInfo> steelAddressInfo(){
+        List<SteelAddressInfo> steelAddressInfoList = steelMillInfoService.getSteelAddressInfo();
         return steelAddressInfoList;
     }
 
