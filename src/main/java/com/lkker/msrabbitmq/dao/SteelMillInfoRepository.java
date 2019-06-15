@@ -15,6 +15,6 @@ import java.util.List;
  **/
 public interface SteelMillInfoRepository extends JpaRepository<SteelMillInformation,String> {
 
-    @Query(value = "SELECT new SteelMillInformation(steelName,address,yield) FROM SteelMillInformation smi where smi.status=?1")
-    List<SteelMillInformation> findOrderByYield(int status,Pageable pageable);
+    @Query(value = "select new com.lkker.msrabbitmq.model.SteelAddressInfo(steelName,address,yield) from SteelMillInformation smi where smi.status=?1")
+    List<SteelAddressInfo> findOrderByYield(int status,Pageable pageable);
 }
