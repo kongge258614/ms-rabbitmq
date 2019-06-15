@@ -11,6 +11,8 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table(name = "steel_mill_information")
 public class SteelMillInformation {
+    private int id;
+
     // 钢厂id
     @Column(name = "steel_id",length = 10)
     @NotNull
@@ -34,7 +36,15 @@ public class SteelMillInformation {
     private int status;
 
     @Id
-    @GeneratedValue()
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getSteelId() {
         return steelId;
     }
