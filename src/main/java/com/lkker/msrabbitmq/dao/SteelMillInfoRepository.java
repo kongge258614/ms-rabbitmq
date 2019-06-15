@@ -9,4 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Description
  **/
 public interface SteelMillInfoRepository extends JpaRepository<SteelMillInformation,String> {
+
+
 }

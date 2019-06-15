@@ -1,6 +1,7 @@
 package com.lkker.msrabbitmq.service.impl;
 
 import com.lkker.msrabbitmq.dao.SteelMillInfoRepository;
+import com.lkker.msrabbitmq.model.SteelAddressInfo;
 import com.lkker.msrabbitmq.model.SteelMillInformation;
 import com.lkker.msrabbitmq.service.SteelMillInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,5 +24,10 @@ public class SteelMillInfoServiceImpl implements SteelMillInfoService {
     public List<SteelMillInformation> getSteelMillInfoList() {
         List<SteelMillInformation> steelMillInformationList = steelMillInfoRepository.findAll();
         return steelMillInformationList;
+    }
+
+    @Override
+    public List<SteelAddressInfo> getSteelAddressInfo() {
+        return null;
     }
 }

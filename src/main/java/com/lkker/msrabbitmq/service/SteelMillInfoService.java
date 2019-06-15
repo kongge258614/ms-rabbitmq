@@ -1,5 +1,6 @@
 package com.lkker.msrabbitmq.service;
 
+import com.lkker.msrabbitmq.model.SteelAddressInfo;
 import com.lkker.msrabbitmq.model.SteelMillInformation;
 
 import java.util.List;
@@ -12,4 +13,6 @@ import java.util.List;
 public interface SteelMillInfoService {
 
     List<SteelMillInformation> getSteelMillInfoList();
+
+    List<SteelAddressInfo> getSteelAddressInfo();
 }
