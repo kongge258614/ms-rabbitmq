@@ -5,6 +5,9 @@ import com.lkker.msrabbitmq.model.SteelAddressInfo;
 import com.lkker.msrabbitmq.model.SteelMillInformation;
 import com.lkker.msrabbitmq.service.SteelMillInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,7 +31,9 @@ public class SteelMillInfoServiceImpl implements SteelMillInfoService {
 
     @Override
     public List<SteelAddressInfo> getSteelAddressInfo() {
-        List<SteelAddressInfo> orderByYield = steelMillInfoRepository.findOrderByYield();
+        Sort sort = new Sort(Sort.Direction.DESC,"yield");
+        Pageable pageable = PageRequest.of(0, 2, sort);
+        List<SteelAddressInfo> orderByYield = steelMillInfoRepository.findOrderByYield(pageable);
         return orderByYield;
     }
 }
