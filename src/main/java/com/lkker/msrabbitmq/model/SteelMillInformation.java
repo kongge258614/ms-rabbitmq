@@ -1,9 +1,7 @@
 package com.lkker.msrabbitmq.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 /**
  * @Author liliang
@@ -14,7 +12,8 @@ import javax.persistence.Table;
 @Table(name = "steel_mill_information")
 public class SteelMillInformation {
     // 钢厂id
-    @Column(name = "steel_id")
+    @Column(name = "steel_id",length = 10)
+    @NotNull
     private String steelId;
 
     // 钢厂名字
@@ -32,6 +31,7 @@ public class SteelMillInformation {
     private String creationTime;
 
     @Id
+    @GeneratedValue()
     public String getSteelId() {
         return steelId;
     }
