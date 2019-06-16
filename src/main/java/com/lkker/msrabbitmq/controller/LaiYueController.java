@@ -61,8 +61,8 @@ public class LaiYueController {
      * @return
      */
     @GetMapping("/logisticsVehicleInfo")
-    public List<Object> logisticsVehicleInfo(){
-        List<Object> logisticsVehicleInfoList = steelMillInfoService.getLogisticsVehicleInfo();
+    public List<LogisticsVehicleInfo> logisticsVehicleInfo(){
+        List<LogisticsVehicleInfo> logisticsVehicleInfoList = steelMillInfoService.getLogisticsVehicleInfo();
         return logisticsVehicleInfoList;
     }
 
