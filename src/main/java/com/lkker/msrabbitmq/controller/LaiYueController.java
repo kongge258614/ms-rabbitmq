@@ -51,7 +51,7 @@ public class LaiYueController {
      * 根据物流id查询物流信息
      * @return
      */
-    @GetMapping("/steelAddressInfo")
+    @GetMapping("/logisticsVehicleInfo")
     public List<LogisticsVehicleInfo> logisticsVehicleInfo(){
         List<LogisticsVehicleInfo> logisticsVehicleInfoList = steelMillInfoService.getLogisticsVehicleInfo();
         return logisticsVehicleInfoList;
