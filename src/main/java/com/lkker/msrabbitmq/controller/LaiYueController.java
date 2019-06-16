@@ -35,6 +35,10 @@ public class LaiYueController {
         return steelMillInfoList;
     }
 
+    /**
+     * 查询钢厂的地址信息
+     * @return
+     */
     @GetMapping("/steelAddressInfo")
     public List<SteelAddressInfo> steelAddressInfo(){
         List<SteelAddressInfo> steelAddressInfoList = steelMillInfoService.getSteelAddressInfo();
