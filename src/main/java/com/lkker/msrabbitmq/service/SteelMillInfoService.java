@@ -19,6 +19,6 @@ public interface SteelMillInfoService {
 
     List<LogisticsVehicleInfo> findLogisticsVehicleInfo();
 
-    List<Object> getLogisticsVehicleInfo();
+    List<LogisticsVehicleInfo> getLogisticsVehicleInfo();
 
 }
