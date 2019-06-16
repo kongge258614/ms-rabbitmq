@@ -17,5 +17,5 @@ public interface SteelMillInfoService {
 
     List<SteelAddressInfo> getSteelAddressInfo();
 
-    LogisticsVehicleInfo getLogisticsVehicleInfo(String logisticsId);
+    List<LogisticsVehicleInfo> getLogisticsVehicleInfo();
 }

@@ -49,13 +49,12 @@ public class LaiYueController {
 
     /**
      * 根据物流id查询物流信息
-     * @param logisticsId
      * @return
      */
     @GetMapping("/steelAddressInfo")
-    public LogisticsVehicleInfo logisticsVehicleInfo(@RequestParam String logisticsId){
-
-        return null;
+    public List<LogisticsVehicleInfo> logisticsVehicleInfo(){
+        List<LogisticsVehicleInfo> logisticsVehicleInfoList = steelMillInfoService.getLogisticsVehicleInfo();
+        return logisticsVehicleInfoList;
     }
 
 

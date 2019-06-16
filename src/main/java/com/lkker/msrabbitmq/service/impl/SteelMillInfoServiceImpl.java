@@ -39,7 +39,8 @@ public class SteelMillInfoServiceImpl implements SteelMillInfoService {
     }
 
     @Override
-    public LogisticsVehicleInfo getLogisticsVehicleInfo(String logisticsId) {
-        return null;
+    public List<LogisticsVehicleInfo> getLogisticsVehicleInfo() {
+        List<LogisticsVehicleInfo> logisticsVehicleInfoList = steelMillInfoRepository.findLogisticsVehicleInfo();
+        return logisticsVehicleInfoList;
     }
 }

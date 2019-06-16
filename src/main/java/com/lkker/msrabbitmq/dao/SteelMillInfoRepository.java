@@ -1,5 +1,6 @@
 package com.lkker.msrabbitmq.dao;
 
+import com.lkker.msrabbitmq.model.vo.LogisticsVehicleInfo;
 import com.lkker.msrabbitmq.model.vo.SteelAddressInfo;
 import com.lkker.msrabbitmq.model.po.SteelMillInformation;
 import org.springframework.data.domain.Pageable;
@@ -19,5 +20,6 @@ public interface SteelMillInfoRepository extends JpaRepository<SteelMillInformat
     @Query(value = "select new com.lkker.msrabbitmq.model.vo.SteelAddressInfo(steelName,address,yield) from SteelMillInformation smi where smi.status=?1")
     List<SteelAddressInfo> findOrderByYield(int status,Pageable pageable);
 
-
+    @Query(value = "select new com.lkker.msrabbitmq.model.vo.LogisticsVehicleInfo(l.logisticsId,l.userId,v.numberPlate,v.vehicleType) from Logistics l,VehicleInfo v where l.numberPlate = v.numberPlate")
+    List<LogisticsVehicleInfo> findLogisticsVehicleInfo();
 }
