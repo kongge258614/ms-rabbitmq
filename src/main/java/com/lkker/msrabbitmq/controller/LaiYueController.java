@@ -48,14 +48,23 @@ public class LaiYueController {
     }
 
     /**
-     * 根据物流id查询物流信息
+     * 根据物流id查询物流信息(使用JPQL查询)
      * @return
      */
-    @GetMapping("/logisticsVehicleInfo")
-    public List<LogisticsVehicleInfo> logisticsVehicleInfo(){
-        List<LogisticsVehicleInfo> logisticsVehicleInfoList = steelMillInfoService.getLogisticsVehicleInfo();
+    @GetMapping("/logisticsVehicleInfoJPQL")
+    public List<LogisticsVehicleInfo> logisticsVehicleInfoJPQL(){
+        List<LogisticsVehicleInfo> logisticsVehicleInfoList = steelMillInfoService.findLogisticsVehicleInfo();
         return logisticsVehicleInfoList;
     }
 
+    /**
+     * 根据物流id查询物流信息(使用原生SQL查询)
+     * @return
+     */
+    @GetMapping("/logisticsVehicleInfo")
+    public List<Object> logisticsVehicleInfo(){
+        List<Object> logisticsVehicleInfoList = steelMillInfoService.getLogisticsVehicleInfo();
+        return logisticsVehicleInfoList;
+    }
 
 }
