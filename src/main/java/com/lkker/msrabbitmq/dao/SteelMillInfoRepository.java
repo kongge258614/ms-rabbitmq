@@ -33,7 +33,7 @@ public interface SteelMillInfoRepository extends JpaRepository<SteelMillInformat
     List<LogisticsVehicleInfo> findLogisticsVehicleInfo();
 
     /**
-     * 使用原生SQL实现复杂的夺标联合查询
+     * 使用原生SQL实现复杂的多表联合查询  只能通过object来接收数据，然后自己转换成相应的对象。此处的object是关键，否则会报转换异常
      * @return
      */
     @Query(nativeQuery = true,value = "SELECT logistics.logistics_id,logistics.user_id,vehicle_info.number_plate,vehicle_info.vehicle_type FROM logistics,vehicle_info WHERE logistics.number_plate=vehicle_info.number_plate")
