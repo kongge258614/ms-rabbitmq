@@ -1,5 +1,6 @@
 package com.lkker.msrabbitmq.controller;
 
+import com.lkker.msrabbitmq.model.vo.LogisticsVehicleInfo;
 import com.lkker.msrabbitmq.model.vo.SteelAddressInfo;
 import com.lkker.msrabbitmq.model.po.SteelMillInformation;
 import com.lkker.msrabbitmq.service.SteelMillInfoService;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -45,7 +47,16 @@ public class LaiYueController {
         return steelAddressInfoList;
     }
 
+    /**
+     * 根据物流id查询物流信息
+     * @param logisticsId
+     * @return
+     */
+    @GetMapping("/steelAddressInfo")
+    public LogisticsVehicleInfo logisticsVehicleInfo(@RequestParam String logisticsId){
 
+        return null;
+    }
 
 
 }
