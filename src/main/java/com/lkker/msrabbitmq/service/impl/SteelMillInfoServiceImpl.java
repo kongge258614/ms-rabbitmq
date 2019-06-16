@@ -34,8 +34,9 @@ public class SteelMillInfoServiceImpl implements SteelMillInfoService {
     public List<SteelAddressInfo> getSteelAddressInfo() {
         Sort sort = new Sort(Sort.Direction.DESC,"yield");
         Pageable pageable = PageRequest.of(0, 2, sort);
-        List<SteelAddressInfo> orderByYield = steelMillInfoRepository.findOrderByYield(1,pageable);
-        return orderByYield;
+        List<SteelAddressInfo> steelAddressInfoList = steelMillInfoRepository.findOrderByYield(0,pageable);
+//        List<SteelAddressInfo> steelAddressInfoList = steelMillInfoRepository.findOrderByYield(pageable);
+        return steelAddressInfoList;
     }
 
     @Override

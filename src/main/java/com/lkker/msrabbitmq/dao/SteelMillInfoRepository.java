@@ -18,12 +18,21 @@ public interface SteelMillInfoRepository extends JpaRepository<SteelMillInformat
 
     /**
      * 此处com.lkker.msrabbitmq.model.SteelAddressInfo必须为全路径，否则会报错，谨记!!!
+     * 只需要将pageable参数传入即可，jpa自己给我们处理。
      * @param status
      * @param pageable
      * @return
      */
     @Query(value = "select new com.lkker.msrabbitmq.model.vo.SteelAddressInfo(steelName,address,yield) from SteelMillInformation smi where smi.status=?1")
     List<SteelAddressInfo> findOrderByYield(int status,Pageable pageable);
+
+//    @Query(value = "select new com.lkker.msrabbitmq.model.vo.SteelAddressInfo(steelName,address,yield) from SteelMillInformation smi")
+//    List<SteelAddressInfo> findOrderByYield(Pageable pageable);
+
+
+
+
+
 
     /**
      * 使用JPQL实现复杂的多表联合查询

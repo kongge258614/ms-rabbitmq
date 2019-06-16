@@ -1,15 +1,14 @@
 package com.lkker.msrabbitmq.controller;
 
+import com.lkker.msrabbitmq.model.po.SteelMillInformation;
 import com.lkker.msrabbitmq.model.vo.LogisticsVehicleInfo;
 import com.lkker.msrabbitmq.model.vo.SteelAddressInfo;
-import com.lkker.msrabbitmq.model.po.SteelMillInformation;
 import com.lkker.msrabbitmq.service.SteelMillInfoService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -28,7 +27,7 @@ public class LaiYueController {
     private SteelMillInfoService steelMillInfoService;
 
     /**
-     * 查询全部的钢厂信息
+     * 查询全部的钢厂信息（简单的单表操作，jpa已经实现封装）
      * @return
      */
     @GetMapping("/steelmillinfo")
