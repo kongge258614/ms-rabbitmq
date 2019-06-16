@@ -1,8 +1,8 @@
 package com.lkker.msrabbitmq.service.impl;
 
 import com.lkker.msrabbitmq.dao.SteelMillInfoRepository;
-import com.lkker.msrabbitmq.model.SteelAddressInfo;
-import com.lkker.msrabbitmq.model.SteelMillInformation;
+import com.lkker.msrabbitmq.model.vo.SteelAddressInfo;
+import com.lkker.msrabbitmq.model.po.SteelMillInformation;
 import com.lkker.msrabbitmq.service.SteelMillInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;

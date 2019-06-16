@@ -1,4 +1,4 @@
-package com.lkker.msrabbitmq.model;
+package com.lkker.msrabbitmq.model.vo;
 
 /**
  * @Author liliang

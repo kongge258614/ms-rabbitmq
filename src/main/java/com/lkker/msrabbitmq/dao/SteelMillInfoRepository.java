@@ -1,7 +1,7 @@
 package com.lkker.msrabbitmq.dao;
 
-import com.lkker.msrabbitmq.model.SteelAddressInfo;
-import com.lkker.msrabbitmq.model.SteelMillInformation;
+import com.lkker.msrabbitmq.model.vo.SteelAddressInfo;
+import com.lkker.msrabbitmq.model.po.SteelMillInformation;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

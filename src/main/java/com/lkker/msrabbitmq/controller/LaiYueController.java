@@ -1,7 +1,7 @@
 package com.lkker.msrabbitmq.controller;
 
-import com.lkker.msrabbitmq.model.SteelAddressInfo;
-import com.lkker.msrabbitmq.model.SteelMillInformation;
+import com.lkker.msrabbitmq.model.vo.SteelAddressInfo;
+import com.lkker.msrabbitmq.model.po.SteelMillInformation;
 import com.lkker.msrabbitmq.service.SteelMillInfoService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
