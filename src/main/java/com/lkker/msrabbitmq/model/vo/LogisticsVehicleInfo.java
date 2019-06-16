@@ -19,6 +19,38 @@ public class LogisticsVehicleInfo {
     // 车辆类型
     private String vehicleType;
 
+    public String getLogisticsId() {
+        return logisticsId;
+    }
+
+    public void setLogisticsId(String logisticsId) {
+        this.logisticsId = logisticsId;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getNumberPlate() {
+        return numberPlate;
+    }
+
+    public void setNumberPlate(String numberPlate) {
+        this.numberPlate = numberPlate;
+    }
+
+    public String getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+
     public LogisticsVehicleInfo() {
     }
 
