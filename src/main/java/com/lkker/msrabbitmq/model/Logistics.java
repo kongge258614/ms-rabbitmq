@@ -1,7 +1,6 @@
 package com.lkker.msrabbitmq.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -13,27 +12,35 @@ import java.util.Date;
 @Table(name = "logistics")
 public class Logistics {
 
-    private String id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     // 物流id
+    @Column(name = "logistics_id")
     private String logisticsId;
 
     // 合同编号
+    @Column(name = "business_no")
     private String businessNo;
 
     // 司机名称
+    @Column(name = "user_name")
     private String userName;
 
     // 发车手机号
     private String mobile;
 
     // 车牌号
+    @Column(name = "number_plate")
     private String numberPlate;
 
     // 货物类型
+    @Column(name = "goods_type")
     private String goodsType;
 
     // 货物类型名称
+    @Column(name = "goods_type_name")
     private String goodsTypeName;
 
     // 出发地
@@ -43,28 +50,33 @@ public class Logistics {
     private String destination;
 
     // 钢厂id
+    @Column(name = "steel_id")
     private String steelId;
 
     // 供货企业id
+    @Column(name = "supply_company")
     private String supplyCompany;
 
     // 货物重量
+    @Column(name = "net_weight")
     private Double netWeight;
 
     // 创建时间
+    @Column(name = "create_at")
     private Date createAt;
 
     // 更新时间
+    @Column(name = "update_at")
     private Date updateAt;
 
     // 状态
     private String type;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
