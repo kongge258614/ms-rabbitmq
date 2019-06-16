@@ -1,9 +1,9 @@
 package com.lkker.msrabbitmq.service.impl;
 
 import com.lkker.msrabbitmq.dao.SteelMillInfoRepository;
+import com.lkker.msrabbitmq.model.po.SteelMillInformation;
 import com.lkker.msrabbitmq.model.vo.LogisticsVehicleInfo;
 import com.lkker.msrabbitmq.model.vo.SteelAddressInfo;
-import com.lkker.msrabbitmq.model.po.SteelMillInformation;
 import com.lkker.msrabbitmq.service.SteelMillInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -11,7 +11,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author liliang
@@ -46,8 +48,19 @@ public class SteelMillInfoServiceImpl implements SteelMillInfoService {
     }
 
     @Override
-    public List<Object> getLogisticsVehicleInfo() {
-        List<Object> logisticsVehicleInfoList = steelMillInfoRepository.getLogisticsVehicleInfo();
+    public List<LogisticsVehicleInfo> getLogisticsVehicleInfo() {
+//        List<LogisticsVehicleInfo> logisticsVehicleInfoList = steelMillInfoRepository.getLogisticsVehicleInfo();
+        List<Map<String, Object>> logisticsVehicleInfoMap = steelMillInfoRepository.getLogisticsVehicleInfo();
+        List<LogisticsVehicleInfo> logisticsVehicleInfoList = new ArrayList<>();
+        for (Map<String, Object> map:logisticsVehicleInfoMap){
+            LogisticsVehicleInfo logisticsVehicleInfo = new LogisticsVehicleInfo();
+            logisticsVehicleInfo.setLogisticsId((String) map.get("logistics_id"));
+            logisticsVehicleInfo.setUserId((String) map.get("user_id"));
+            logisticsVehicleInfo.setNumberPlate((String) map.get("number_plate"));
+            logisticsVehicleInfo.setVehicleType((String) map.get("vehicle_type"));
+            logisticsVehicleInfoList.add(logisticsVehicleInfo);
+        }
+
         return logisticsVehicleInfoList;
     }
 }
