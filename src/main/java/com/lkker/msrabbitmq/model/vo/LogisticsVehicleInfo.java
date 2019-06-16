@@ -1,11 +1,13 @@
 package com.lkker.msrabbitmq.model.vo;
 
+import java.io.Serializable;
+
 /**
  * @Author liliang
  * @Date 2019/6/16 15:22
  * @Description  物流车辆信息
  **/
-public class LogisticsVehicleInfo {
+public class LogisticsVehicleInfo implements Serializable {
 
     // 物流编号
     private String logisticsId;

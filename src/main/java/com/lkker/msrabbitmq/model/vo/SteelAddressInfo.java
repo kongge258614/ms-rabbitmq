@@ -1,12 +1,14 @@
 package com.lkker.msrabbitmq.model.vo;
 
+import java.io.Serializable;
+
 /**
  * @Author liliang
  * @Date 2019/6/15 11:15
  * @Description
  **/
 
-public class SteelAddressInfo {
+public class SteelAddressInfo implements Serializable {
 
     private String steelName;
 
