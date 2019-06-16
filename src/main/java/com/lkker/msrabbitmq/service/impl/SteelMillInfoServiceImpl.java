@@ -1,6 +1,7 @@
 package com.lkker.msrabbitmq.service.impl;
 
 import com.lkker.msrabbitmq.dao.SteelMillInfoRepository;
+import com.lkker.msrabbitmq.model.vo.LogisticsVehicleInfo;
 import com.lkker.msrabbitmq.model.vo.SteelAddressInfo;
 import com.lkker.msrabbitmq.model.po.SteelMillInformation;
 import com.lkker.msrabbitmq.service.SteelMillInfoService;
@@ -35,5 +36,10 @@ public class SteelMillInfoServiceImpl implements SteelMillInfoService {
         Pageable pageable = PageRequest.of(0, 2, sort);
         List<SteelAddressInfo> orderByYield = steelMillInfoRepository.findOrderByYield(1,pageable);
         return orderByYield;
+    }
+
+    @Override
+    public LogisticsVehicleInfo getLogisticsVehicleInfo(String logisticsId) {
+        return null;
     }
 }

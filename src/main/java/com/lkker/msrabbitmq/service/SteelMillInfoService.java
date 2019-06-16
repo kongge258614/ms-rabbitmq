@@ -1,5 +1,6 @@
 package com.lkker.msrabbitmq.service;
 
+import com.lkker.msrabbitmq.model.vo.LogisticsVehicleInfo;
 import com.lkker.msrabbitmq.model.vo.SteelAddressInfo;
 import com.lkker.msrabbitmq.model.po.SteelMillInformation;
 
@@ -15,4 +16,6 @@ public interface SteelMillInfoService {
     List<SteelMillInformation> getSteelMillInfoList();
 
     List<SteelAddressInfo> getSteelAddressInfo();
+
+    LogisticsVehicleInfo getLogisticsVehicleInfo(String logisticsId);
 }
