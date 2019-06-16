@@ -16,6 +16,6 @@ import java.util.List;
 public interface SteelMillInfoRepository extends JpaRepository<SteelMillInformation,String> {
 
     // 此处com.lkker.msrabbitmq.model.SteelAddressInfo必须为全路径，否则会报错，谨记
-    @Query(value = "select new com.lkker.msrabbitmq.model.SteelAddressInfo(steelName,address,yield) from SteelMillInformation smi where smi.status=?1")
+    @Query(value = "select new com.lkker.msrabbitmq.model.vo.SteelAddressInfo(steelName,address,yield) from SteelMillInformation smi where smi.status=?1")
     List<SteelAddressInfo> findOrderByYield(int status,Pageable pageable);
 }
