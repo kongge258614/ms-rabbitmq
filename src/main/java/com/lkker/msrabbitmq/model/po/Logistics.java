@@ -25,8 +25,8 @@ public class Logistics {
     private String businessNo;
 
     // 司机名称
-    @Column(name = "user_name")
-    private String userName;
+    @Column(name = "user_id")
+    private String userId;
 
     // 发车手机号
     private String mobile;
@@ -96,12 +96,12 @@ public class Logistics {
         this.businessNo = businessNo;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getMobile() {
