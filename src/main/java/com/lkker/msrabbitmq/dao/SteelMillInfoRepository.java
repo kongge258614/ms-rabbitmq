@@ -1,13 +1,14 @@
 package com.lkker.msrabbitmq.dao;
 
+import com.lkker.msrabbitmq.model.po.SteelMillInformation;
 import com.lkker.msrabbitmq.model.vo.LogisticsVehicleInfo;
 import com.lkker.msrabbitmq.model.vo.SteelAddressInfo;
-import com.lkker.msrabbitmq.model.po.SteelMillInformation;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author liliang
@@ -30,10 +31,6 @@ public interface SteelMillInfoRepository extends JpaRepository<SteelMillInformat
 //    List<SteelAddressInfo> findOrderByYield(Pageable pageable);
 
 
-
-
-
-
     /**
      * 使用JPQL实现复杂的多表联合查询
      * @return
@@ -46,6 +43,5 @@ public interface SteelMillInfoRepository extends JpaRepository<SteelMillInformat
      * @return
      */
     @Query(nativeQuery = true,value = "SELECT logistics.logistics_id,logistics.user_id,vehicle_info.number_plate,vehicle_info.vehicle_type FROM logistics,vehicle_info WHERE logistics.number_plate=vehicle_info.number_plate")
-    List<Object> getLogisticsVehicleInfo();
-
+    List<Map<String,Object>> getLogisticsVehicleInfo();
 }
