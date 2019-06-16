@@ -21,5 +21,6 @@ public interface SteelMillInfoRepository extends JpaRepository<SteelMillInformat
     List<SteelAddressInfo> findOrderByYield(int status,Pageable pageable);
 
     @Query(value = "select new com.lkker.msrabbitmq.model.vo.LogisticsVehicleInfo(l.logisticsId,l.userId,v.numberPlate,v.vehicleType) from Logistics l,VehicleInfo v where l.numberPlate = v.numberPlate")
+//    @Query(nativeQuery = true,value = "SELECT logistics.logistics_id,logistics.user_id,vehicle_info.number_plate,vehicle_info.vehicle_type FROM logistics,vehicle_info WHERE logistics.number_plate=vehicle_info.number_plate")
     List<LogisticsVehicleInfo> findLogisticsVehicleInfo();
 }
